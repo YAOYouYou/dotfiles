@@ -73,7 +73,13 @@ ZSH_THEME="ys"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-vi-mode)
+plugins=(
+	git
+	zsh-autosuggestions
+	zsh-syntax-highlighting
+	zsh-vi-mode
+	z.lua
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -121,5 +127,5 @@ unset __conda_setup
 export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
 
 eval "$(starship init zsh)"
+
 # 开启 z.lua
-eval "$(lua /opt/homebrew/Cellar/z.lua/1.8.16/share/z.lua/z.lua --init zsh)"
