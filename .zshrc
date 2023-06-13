@@ -78,7 +78,7 @@ plugins=(
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 	zsh-vi-mode
-	z.lua
+	# z.lua
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -108,8 +108,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias lzd='lazydocker'
-alias v='nvim'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -125,7 +123,9 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
+export HOMEBREW_NO_INSTALL_CLEANUP=TRUE
 
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
 # 开启 z.lua
