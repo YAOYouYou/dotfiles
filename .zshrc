@@ -122,10 +122,9 @@ export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
 unset __conda_setup
 # <<< conda initialize <<<
 
-export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
-export HOMEBREW_NO_INSTALL_CLEANUP=TRUE
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
-# 开启 z.lua
+. "$HOME/.aliases"
