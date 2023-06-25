@@ -14,3 +14,6 @@ export BAT_THEME="OneHalfDark"
 export EDITOR="nvim"
 
 export ZVIM_INIT_MODE="sourcing"
+
+export FZF_DEFAULT_OPTS='--height 50% --layout=reverse'
+# export FZF_DEFAULT_COMMAND='fd --type f'
