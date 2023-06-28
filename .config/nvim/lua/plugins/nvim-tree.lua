@@ -141,7 +141,7 @@ return {
         dotfiles = false,
         git_clean = false,
         no_buffer = false,
-        custom = {},
+        custom = { "^.git$" },
         exclude = {},
       },
       filesystem_watchers = {
@@ -151,7 +151,7 @@ return {
       },
       git = {
         enable = true,
-        ignore = true,
+        ignore = false,
         show_on_dirs = true,
         show_on_open_dirs = true,
         disable_for_dirs = {},
