@@ -1,6 +1,7 @@
 alias cl="clear"
 
-alias lzd='lazydocker'
+alias ld='lazydocker'
+alias lg='lazygit'
 alias v='nvim'
 alias info='neofetch'
 alias fm='joshuto'
