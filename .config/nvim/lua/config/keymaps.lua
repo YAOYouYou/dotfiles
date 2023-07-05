@@ -10,6 +10,11 @@ vim.keymap.del("n", "<leader>l", opts)
 
 --
 vim.keymap.set("n", ";", ":")
+vim.keymap.set("n", "Q", "<cmd>q!<cr>")
+
+vim.keymap.set("n", "yie", "ggVGy", opts)
+vim.keymap.set("n", "die", "ggVGd", opts)
+vim.keymap.set("n", "vie", "ggVG", opts)
 
 -- cursor jumper between screen
 vim.keymap.set("n", "<leader>l", "<c-w>l", opts)
