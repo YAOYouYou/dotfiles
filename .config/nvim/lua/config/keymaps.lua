@@ -36,3 +36,9 @@ vim.keymap.set("n", "<right>", ":vertical resize-5<cr>", opts)
 
 -- plugin
 vim.keymap.set("n", "<leader>e", require("nvim-tree.api").tree.toggle)
+
+vim.keymap.set("n", "<F5>", "<cmd>AsyncTask file-run<cr>", opts)
+vim.keymap.set("n", "<F6>", "<cmd>AsyncTask project-run<cr>", opts)
+
+vim.keymap.set("n", "<leader>ml", "<cmd>Telescope harpoon marks<cr>", opts)
+vim.keymap.set("n", "<leader>ma", require("harpoon.mark").add_file, opts)
