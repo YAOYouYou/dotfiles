@@ -42,3 +42,7 @@ vim.keymap.set("n", "<F6>", "<cmd>AsyncTask project-run<cr>", opts)
 
 vim.keymap.set("n", "<leader>ml", "<cmd>Telescope harpoon marks<cr>", opts)
 vim.keymap.set("n", "<leader>ma", require("harpoon.mark").add_file, opts)
+
+vim.keymap.set("n", "<leader>dd", function()
+  require("dap-python").setup(require("dap-python").resolve_python())
+end, opts)
