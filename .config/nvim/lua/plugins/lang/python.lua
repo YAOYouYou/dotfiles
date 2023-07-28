@@ -47,22 +47,13 @@ return {
         { "<leader>dPt", function() require('dap-python').test_method() end, desc = "Debug Method" },
         { "<leader>dPc", function() require('dap-python').test_class() end, desc = "Debug Class" },
       },
-      config = function()
-        local path = require("mason-registry").get_package("debugpy"):get_install_path()
-        require("dap-python").setup(path .. "/venv/bin/python")
-      end,
     },
   },
   {
     "linux-cultist/venv-selector.nvim",
     keys = {
-      {
-        "<leader>vs",
-        "<cmd>:VenvSelect<cr>",
-        -- key mapping for directly retrieve from cache. You may set autocmd if you prefer the no hand approach
-        "<leader>vc",
-        "<cmd>:VenvSelectCached<cr>",
-      },
+      { "<leader>vs", "<cmd>:VenvSelect<cr>", desc = "venv select" },
+      { "<leader>vc", "<cmd>:VenvSelectCached<cr>", desc = "venv select cached" },
     },
     config = function()
       local hook = function(_, path)
