@@ -1,20 +1,4 @@
 return {
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    -- enabled = false,
-    config = function()
-      require("neo-tree").setup({
-        filesystem = {
-          window = {
-            mappings = {
-              ["o"] = "open",
-            },
-          },
-        },
-      })
-    end,
-  },
-
   { "navarasu/onedark.nvim" },
 
   {
