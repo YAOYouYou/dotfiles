@@ -1,3 +1,5 @@
+local python_util = require("utils.python")
+
 return {
   {
     "nvim-treesitter/nvim-treesitter",
@@ -31,8 +33,8 @@ return {
       adapters = {
         ["neotest-python"] = {
           -- Here you can specify the settings for the adapter, i.e.
-          -- runner = "pytest",
-          -- python = ".venv/bin/python",
+          runner = "pytest",
+          python = python_util.get_python_path(),
         },
       },
     },
