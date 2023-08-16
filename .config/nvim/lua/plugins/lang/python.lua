@@ -59,6 +59,7 @@ return {
     },
     config = function()
       local hook = function(_, path)
+        -- set dap
         require("dap-python").setup(path)
       end
       local venv_selector = require("venv-selector")
