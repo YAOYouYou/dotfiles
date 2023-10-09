@@ -5,10 +5,18 @@ vim.api.nvim_create_autocmd("VimEnter", {
   desc = "Auto select virtualenv Nvim open",
   pattern = "*",
   callback = function()
-    local venv = vim.fn.findfile("pyproject.toml", vim.fn.getcwd() .. ";")
+    local venv = vim.fn.findfile(".python-version", vim.fn.getcwd() .. ";")
     if venv ~= "" then
       require("venv-selector").retrieve_from_cache()
     end
   end,
   once = true,
+})
+
+-- Disable autoformat for lua files
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "lua", "py", "bash"},
+  callback = function()
+    vim.b.autoformat = false
+  end,
 })
