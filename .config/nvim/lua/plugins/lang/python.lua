@@ -17,6 +17,9 @@ return {
           settings = {
             python = {
               pythonPath = vim.fn.trim(vim.fn.system("pyenv which python")),
+              analysis = {
+                typeCheckingMode = "off",
+              },
             },
           },
         },
@@ -35,6 +38,7 @@ return {
           -- Here you can specify the settings for the adapter, i.e.
           runner = "pytest",
           python = python_util.get_python_path(),
+          justMyCode = false,
         },
       },
     },
@@ -60,7 +64,9 @@ return {
     config = function()
       local hook = function(_, path)
         -- set dap
-        require("dap-python").setup(path)
+        local dap_python = require("dap-python")
+        -- dap_python.DebugpyConfig.justMyCode = false
+        dap_python.setup(path, { include_configs = true })
       end
       local venv_selector = require("venv-selector")
       venv_selector.setup({
