@@ -12,3 +12,5 @@ alias kdiff="kitty +kitten diff"
 
 
 alias fpv='fzf --preview "bat --style=numbers --color=always --line-range :500 {}"'
+
+alias finder='open -a Finder ./'
