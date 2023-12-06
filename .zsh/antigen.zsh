@@ -1,3 +1,6 @@
+# zsh-vi-mode
+ZVM_VI_EDITOR=nvim
+
 source $HOME/antigen.zsh
     
 # Load the oh-my-zsh's library
